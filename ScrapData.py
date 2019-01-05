@@ -69,6 +69,11 @@ dict = {
 }
 
 def remove_emoji(string):
+    '''
+    Fonction permettant de supprimer les codes des emojis
+    :param string: phrase
+    :return: phrase netoye
+    '''
     emoji_pattern = re.compile("["
                                u"\U0001F600-\U0001F64F"  # emoticons
                                u"\U0001F300-\U0001F5FF"  # symbols & pictographs
@@ -90,7 +95,7 @@ def remove_emoji(string):
 
 def remove_emoji2(data):
     """
-    去除表情
+    Autre methode pour supprimer des emojors
     :param data:
     :return:
     """

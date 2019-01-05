@@ -1,6 +1,13 @@
 import pandas as pd
+"""
+Classe permettant d'appliquer des filtres mais aussi donnant des infos utiles sur notre dataset
+"""
 
-def cleanDuplicateData:
+def cleanDuplicateData():
+    '''
+    Supprime les doublons
+    :return:
+    '''
     data = pd.read_csv('data.txt', sep=",", header=None)
     data.columns = ["text", "result"]
     print(data.shape)
@@ -15,12 +22,16 @@ def cleanDuplicateData:
     df2.to_csv('cleanData.txt', header=None, index=None, sep=',', mode='w')
 
 
-def showValuesCount:
+def showValuesCount():
+    '''
+    Affiche des infos sur notre dataset
+    :return:
+    '''
     data = pd.read_csv('cleanData.txt', sep=",", header=None)
     data.columns = ["text", "result"]
     print(data['result'])
 
-def cleanResultName:
+def cleanResultName():
     goodResult = ['0', '1']
 
     for index, row in data.iterrows():
